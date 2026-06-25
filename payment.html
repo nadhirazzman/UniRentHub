@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+   <div class="logo-container">
+    <img src="images/logo.png" alt="logo.png">
+    <h2>UniRent Hub</h2>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="browse.html">🌸 Explore Rentals</a>
+        <a href="dashboard.html">📦 My Rentals</a>
+        <a href="supplier.html">✨ Become Supplier</a>
+    </div>
+
+</nav>
+
+<section class="form-section">
+
+    <div class="form-card">
+
+        <h1>
+    Complete Payment
+    <span class="title-icon">💳</span>
+</h1>
+
+        <div class="summary-box" id="paymentSummary">
+    Loading payment details...
+</div>
+        <p><b>DuitNow / QR Payment</b></p>
+        <p>Scan this QR to complete payment.</p>
+       <div class="qr-box">
+    <img src="images/qr.jpg" class="qr-image">
+</div>
+
+
+<form onsubmit="confirmPayment(); return false;">
+
+<label>🧾 Upload Payment Proof</label>
+
+<input
+    type="file"
+    id="paymentProof"
+    accept=".jpg,.jpeg,.png,.pdf"
+    required
+>
+
+<button onclick="confirmPayment()" id="confirmBtn">
+    ✨ Confirm Payment
+</button>
+
+</form>
+
+   
+
+    
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>

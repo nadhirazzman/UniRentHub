@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Become Supplier</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="logo">
+        <h2>UniRent Hub</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="browse.html">🌸 Explore Rentals</a>
+        <a href="dashboard.html">📦 My Rentals</a>
+        <a href="supplier.html">✨ Become Supplier</a>
+    </div>
+</nav>
+
+<section class="form-section">
+    <div class="form-card">
+
+        <h1>✨ Become a Supplier</h1>
+
+       <p class="subtitle">
+    Interested in listing your item on UniRent Hub?
+</p>
+
+<p class="subtitle supplier-subtitle">
+    Send us your inquiry.
+</p>
+<div class="supplier-disclaimer">
+    📌 Disclaimer: UniRent Hub will take 10% commission from each successful rental transaction.
+</div>
+        <form onsubmit="submitSupplierInquiry(); return false;">
+
+            <label>👤 Full Name</label>
+            <input type="text" id="supplierName" placeholder="Enter your full name" required>
+
+           <label>
+    <span class="student-id-icon">🪪</span>
+    Student ID
+</label>
+            <input type="text" id="supplierStudentId" placeholder="Enter your student ID" required>
+
+            <label>📧 Student Email</label>
+            <input
+                type="email"
+                id="supplierEmail"
+                placeholder="example@student.uitm.edu.my"
+                pattern=".+@student\.uitm\.edu\.my"
+                title="Please use your UiTM student email (@student.uitm.edu.my)"
+                required
+            >
+
+            <label>📱 Phone Number</label>
+            <input type="text" id="supplierPhone" placeholder="Enter your phone number" required>
+
+            <label>📦 Item You Want to Supply</label>
+            <input type="text" id="supplierItem" placeholder="Example: Camera, Blazer, Calculator" required>
+
+            <label>💬 Message / Inquiry</label>
+            <textarea id="supplierMessage" placeholder="Tell us about your item..." required></textarea>
+
+           <button type="submit" class="supplier-submit-btn">
+    📩 Submit Inquiry
+</button>
+
+        </form>
+
+        <div id="supplierSuccess" class="success-message" style="display:none;">
+            ✅ Your supplier inquiry has been submitted successfully.
+        </div>
+
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Rentals</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<nav class="navbar">
+
+   <div class="logo-container">
+    <img src="images/logo.png" alt="logo.png">
+    <h2>UniRent Hub</h2>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="browse.html">🌸 Explore Rentals</a>
+        <a href="dashboard.html">📦 My Rentals</a>
+        <a href="supplier.html">✨ Become Supplier</a>
+    </div>
+
+</nav>
+
+<section class="section">
+    <h1>Explore Student Essentials</h1>
+    <p>Choose what you need without spending too much.</p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/calculator.png" alt="Scientific Calculator" class="product-image">
+            <h2>Scientific Calculator</h2>
+            <p>RM3/day</p>
+            <p>Deposit: RM5</p>
+            <button onclick="rentItem('Scientific Calculator', 3, 5)">Rent This Item</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/blazer.png" alt="Presentation Blazer" class="product-image">
+            <h2>Presentation Blazer</h2>
+            <p>RM5/day</p>
+            <p>Deposit: RM5</p>
+            <button onclick="rentItem('Presentation Blazer', 5, 5)">Rent This Item</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/camera.png" alt="Camera" class="product-image">
+            <h2>Camera</h2>
+            <p>RM50/day</p>
+            <p>Deposit: RM100</p>
+            <button onclick="rentItem('Camera', 50, 100)">Rent This Item</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/tripod.png" alt="Tripod" class="product-image">
+            <h2>Tripod</h2>
+            <p>RM4/day</p>
+            <p>Deposit: RM5</p>
+            <button onclick="rentItem('Tripod', 4, 5)">Rent This Item</button>
+        </div>
+
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

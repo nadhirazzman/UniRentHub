@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+   <div class="logo-container">
+    <img src="images/logo.png" alt="logo.png">
+    <h2>UniRent Hub</h2>
+</div>
+
+    <div class="nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="browse.html">🌸 Explore Rentals</a>
+        <a href="dashboard.html">📦 My Rentals</a>
+        <a href="supplier.html">✨ Become Supplier</a>
+    </div>
+
+</nav>
+
+<section class="form-section">
+
+    <div class="form-card">
+
+        <div class="booking-badge">Almost yours 💜</div>
+
+        <h1>Complete Your Booking </h1>
+
+        <p class="subtitle">
+            Fill in your details to secure your rental item.
+        </p>
+
+        
+
+        <form onsubmit="goToPayment(); return false;">
+
+            <label>👤 Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+           <label>
+    <span class="label-icon">🪪</span> Student Card
+</label>
+            <input type="text" id="studentId" placeholder="Enter your student ID" required>
+
+            <label>📧 Student Email</label>
+
+<div class="email-box">
+    <input
+    type="email"
+    id="studentEmail"
+    placeholder="example@student.uitm.edu.my"
+    pattern=".+@student\.uitm\.edu\.my"
+    title="Please use your UiTM student email (@student.uitm.edu.my)"
+    required
+>
+<small style="color:#888;">
+    Only UiTM student emails are accepted.
+</small>
+</div>
+
+            <label>📱 Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+            <label>📤 Upload Student Card</label>
+            <input type="file" id="studentCard" required>
+
+
+<div id="availabilityBox" class="availability-box">
+          Please select rental dates.
+</div>
+<label>📅 Rental Start Date</label>
+<input
+    type="date"
+    id="startDate"
+    onchange="checkAvailability()"
+    required
+>
+
+<label>📅 Rental End Date</label>
+<input
+    type="date"
+    id="endDate"
+    onchange="checkAvailability()"
+    required
+>
+
+
+
+
+            <label>📍 Pickup Location</label>
+            <select id="pickup" required>
+                <option value="">Select pickup location</option>
+                <option>PTAR</option>
+                <option>Faculty of Accountancy</option>
+                <option>Cafe Raff</option>
+            </select>
+
+          <div class="terms">
+    <input type="checkbox" required>
+
+    <label>
+        I agree to the
+        <a href="#" onclick="showTerms()">rental terms and conditions</a>.
+    </label>
+</div> 
+
+           
+
+         
+   <button type="submit" class="payment-btn">
+    <span class="btn-icon">💳</span>
+    Continue to Payment
+</button>
+        </form>
+
+    </div>
+<div id="termsPopup" class="popup">
+    <div class="popup-content">
+        <h2>Rental Terms and Conditions</h2>
+
+        
+        <p>1. Students must provide accurate personal information when making a booking.</p>
+
+<p>2. After payment has been made, UniRent Hub team will contact the renter for verification of UiTM Student Card and payment proof, further collection details and instructions.</p>
+
+<p>3. Items must be returned on or before the selected return date.</p>
+
+<p>4. UniRent Hub reserves the right to refuse item collection if the student's identity or payment proof cannot be verified.</p>
+
+<p>5. Additional Charges: </p>
+    <p> * Late Return Fee: Charges of RM5/day apply for items returned after the agreed return date.</p>
+    <p> * Damage, Lost Item, and Missing Accessories Fee: Customers are responsible for any damaged, lost, or incomplete items. Relevant charges may be deducted from the security deposit.</p>
+
+
+        <button onclick="closeTerms()">Close</button>
+    </div>
+</div>
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
